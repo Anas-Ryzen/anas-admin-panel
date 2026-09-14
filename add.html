@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>إضافة حصة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="overlay"></div>
+
+<nav class="navbar">
+    <div class="nav-links">
+        <button class="nav-btn" onclick="location.href = 'index.html'">المستخدمين</button>
+        <button class="nav-btn" onclick="location.href = 'lessons.html'">الحصص</button>
+        <button class="nav-btn">إضافه حصه</button>
+    </div>
+</nav>
+
+<main class="users-container add-lesson-layout">
+
+    <!-- بيانات الحصة -->
+    <section class="user-card lesson-card">
+        <h3 class="card-title">بيانات الحصة</h3>
+
+        <div class="field-row">
+            <label>اسم الحصة</label>
+            <input type="text" id="lessonName">
+        </div>
+
+        <div class="field-row">
+            <label>الوصف</label>
+            <input type="text" id="lessonDesc">
+        </div>
+
+        <div class="field-row">
+            <label>السعر</label>
+            <input type="number" id="lessonPrice">
+        </div>
+
+        <div class="field-row">
+            <label>الصف الدراسي</label>
+            <input type="text" id="lessonGrade">
+        </div>
+
+        <div class="field-row">
+            <label>رابط الفيديو</label>
+            <input type="text" id="lessonVideo">
+        </div>
+
+        <div class="field-row">
+            <label>التوكنات المشتركة</label>
+            <input type="text" id="lessonTokens" placeholder="يترك فارغًا">
+        </div>
+
+        <div class="field-row">
+            <label>ID الحصة</label>
+            <input type="number" id="lessonId">
+        </div>
+    </section>
+
+    <!-- أسئلة الحصة -->
+    <section class="user-card questions-card">
+        <h3 class="card-title">أسئلة الحصة</h3>
+
+        <div id="questionsContainer" class="questions-list"></div>
+
+        <button id="addQuestionBtn" class="add-question-btn">
+            + إضافة سؤال
+        </button>
+    </section>
+
+    <!-- حفظ -->
+    <section class="user-card save-card">
+        <button class="submit-btn" id="submitLesson">
+            إضافه الحصه
+        </button>
+    </section>
+
+</main>
+
+<script src="add.js"></script>
+</body>
+</html>

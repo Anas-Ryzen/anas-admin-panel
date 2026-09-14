@@ -1,0 +1,263 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    direction: rtl;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #007BFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: #007BFF;
+}
+/* ===== Users Container ===== */
+.users-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+/* ===== User Card ===== */
+.user-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Title */
+.card-title {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* ===== Fields ===== */
+.field-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.field-row label {
+    width: 35%;
+    font-weight: bold;
+    color: #555;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.field-row input {
+    width: 65%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.field-row input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.4);
+    outline: none;
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #28a745;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #28a745;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    width: 100%;
+    display: none;
+    height: 100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Layout ===== */
+.add-lesson-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+/* ===== Questions ===== */
+.questions-card {
+    background-color: #f9fbff;
+}
+
+.questions-list {
+    margin-top: 20px;
+}
+
+/* Question Card */
+.question-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.question-card h4 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+/* Add Question Button */
+.add-question-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.add-question-btn:hover {
+    opacity: 0.9;
+}
+
+/* Remove Button */
+.remove-question-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #dc3545;
+    background: transparent;
+    color: #dc3545;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.remove-question-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Save */
+.save-card {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .add-lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .save-card {
+        grid-column: span 1;
+    }
+}
