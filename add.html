@@ -34,12 +34,17 @@
 
         <div class="field-row">
             <label>السعر</label>
-            <input type="number" id="lessonPrice">
+            <input type="number" id="lessonPrice" min="0">
         </div>
 
         <div class="field-row">
-            <label>الصف الدراسي</label>
-            <input type="text" id="lessonGrade">
+            <label for="lessonGrade">الصف الدراسي</label>
+            <select id="lessonGrade">
+                <option value="" disabled selected>اختر الصف الدراسي</option>
+                <option value="الصف الاول">الصف الأول الثانوي</option>
+                <option value="الصف الثاني">الصف الثاني الثانوي</option>
+                <option value="الصف الثالث">الصف الثالث الثانوي</option>
+            </select>
         </div>
 
         <div class="field-row">
@@ -48,13 +53,12 @@
         </div>
 
         <div class="field-row">
-            <label>التوكنات المشتركة</label>
-            <input type="text" id="lessonTokens" placeholder="يترك فارغًا">
-        </div>
-
-        <div class="field-row">
             <label>ID الحصة</label>
             <input type="number" id="lessonId">
+        </div>
+        <div class="field-row">
+            <label>الملف المرفق</label>
+            <input type="text" id="attachment">
         </div>
     </section>
 

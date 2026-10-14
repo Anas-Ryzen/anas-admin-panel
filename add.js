@@ -76,7 +76,7 @@ submitBtn.addEventListener("click", () => {
         lessonPrice,
         lessonGrade,
         lessonVideo,
-        lessonId
+        lessonId,
     ];
 
     for (let field of required) {
@@ -86,21 +86,22 @@ submitBtn.addEventListener("click", () => {
             return;
         }
     }
-
-    if (questionsContainer.children.length === 0) {
-        alert("❌ يجب إضافة سؤال واحد على الأقل");
-        overlay.style.display = 'none'
+    if (Number(lessonPrice.value) < 0) {
+        alert("❌ لا يمكن أن يكون السعر أقل من الصفر");
+        overlay.style.display = 'none';
         return;
     }
 
+    
     const rowData = [
         lessonName.value,
         lessonDesc.value,
         lessonPrice.value,
         lessonGrade.value,
         lessonVideo.value,
-        lessonTokens.value || "",
-        lessonId.value
+        "",
+        lessonId.value,
+        attachment.value
     ];
 
     for (let q of questionsContainer.children) {

@@ -50,20 +50,20 @@ fetch(csvUrl)
                 </div>
 
                 <div class="field-row">
-                    <label>التوكنات المشتركه</label>
-                    <input type="text" value="${cols[5] || ''}">
+                    <label>الرقم</label>
+                    <input type="text" value="${cols[6] || ''}">
                 </div>
 
                 <div class="field-row">
-                    <label>الرقم</label>
-                    <input type="text" value="${cols[6] || ''}">
+                    <label>الملف المرفق</label>
+                    <input type="text" value="${cols[7] || ''}">
                 </div>
                 
                 <button class="submit-btn" data-row="${index + 2}">
                     Update
                 </button>
             `;
-
+            card.dataset.oldTokens = cols[5] || '';
             container.appendChild(card);
         });
 
@@ -78,14 +78,20 @@ container.addEventListener("click", function (e){
 
     const rowNumber = e.target.dataset.row;
     const card = e.target.closest(".user-card");
+
     const inputs = card.querySelectorAll("input");
+    const oldTokens = card.dataset.oldTokens;
 
-    const updatedData = [];
-
-    inputs.forEach(input => {
-        updatedData.push(input.value);
-    });
-
+    const updatedData = [
+        inputs[0].value,
+        inputs[1].value,
+        inputs[2].value,
+        inputs[3].value,
+        inputs[4].value,
+        oldTokens,
+        inputs[5].value,
+        inputs[6].value
+    ];
     // إرسال البيانات
     fetch("https://script.google.com/macros/s/AKfycbza2nzoH8Cwomz9la4wB9kHdkjsybK7896USexvZPg4462BWhyrbgpGxwIk8JZeHfQ4gQ/exec", {
         method: "POST",
