@@ -99,6 +99,8 @@ submitBtn.addEventListener("click", () => {
         lessonPrice.value,
         lessonGrade.value,
         lessonVideo.value,
+        classworkVideo.value,
+        hwVideo.value,
         "",
         lessonId.value,
         attachment.value

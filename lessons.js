@@ -50,20 +50,30 @@ fetch(csvUrl)
                 </div>
 
                 <div class="field-row">
-                    <label>الرقم</label>
+                    <label>رابط الكلاس ورك</label>
+                    <input type="text" value="${cols[5] || ''}">
+                </div>
+
+                <div class="field-row">
+                    <label>رابط فيديو الواجب</label>
                     <input type="text" value="${cols[6] || ''}">
                 </div>
 
                 <div class="field-row">
+                    <label>الرقم</label>
+                    <input type="number" value="${cols[8] || ''}">
+                </div>
+
+                <div class="field-row">
                     <label>الملف المرفق</label>
-                    <input type="text" value="${cols[7] || ''}">
+                    <input type="text" value="${cols[9] || ''}">
                 </div>
                 
                 <button class="submit-btn" data-row="${index + 2}">
                     Update
                 </button>
             `;
-            card.dataset.oldTokens = cols[5] || '';
+            card.dataset.oldTokens = cols[6] || '';
             container.appendChild(card);
         });
 
@@ -88,9 +98,11 @@ container.addEventListener("click", function (e){
         inputs[2].value,
         inputs[3].value,
         inputs[4].value,
-        oldTokens,
         inputs[5].value,
-        inputs[6].value
+        inputs[6].value,
+        oldTokens,
+        inputs[7].value,
+        inputs[8].value
     ];
     // إرسال البيانات
     fetch("https://script.google.com/macros/s/AKfycbza2nzoH8Cwomz9la4wB9kHdkjsybK7896USexvZPg4462BWhyrbgpGxwIk8JZeHfQ4gQ/exec", {
@@ -110,3 +122,4 @@ container.addEventListener("click", function (e){
         alert("حدث خطأ ❌");
     });
 });
+
