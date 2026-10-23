@@ -73,7 +73,7 @@ fetch(csvUrl)
                     Update
                 </button>
             `;
-            card.dataset.oldTokens = cols[6] || '';
+            card.dataset.oldTokens = cols[7] || '';
             container.appendChild(card);
         });
 
